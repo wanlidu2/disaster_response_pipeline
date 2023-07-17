@@ -10,12 +10,12 @@ def load_data(messages_filepath, categories_filepath):
     # merge datasets
     df = messages.merge(categories,on='id')
     # create a dataframe of the 36 individual category columns
-    categories = df['categories'].str.split(';',expand=True)
     return categories
 
 categories = load_data('/home/workspace/data/disaster_messages.csv', '/home/workspace/data/disaster_categories.csv')
 
 def clean_data(df):
+    categories = df['categories'].str.split(';',expand=True)
     # select the first row of the categories dataframe
     row = categories.iloc[0]
     # use this row to extract a list of new column names for categories.
