@@ -10,7 +10,7 @@ def load_data(messages_filepath, categories_filepath):
     # merge datasets
     df = messages.merge(categories,on='id')
     # create a dataframe of the 36 individual category columns
-    return categories
+    return df
 
 categories = load_data('/home/workspace/data/disaster_messages.csv', '/home/workspace/data/disaster_categories.csv')
 
