@@ -8,3 +8,7 @@ The final web app will be like
 ![image](https://github.com/wanlidu2/disaster_response_pipeline/assets/121735612/e1d5894e-5f0f-498e-a3e6-400d15433557)
 
 Given real data, we could have it through text analysis and get to know which kind of supplies is needed and give more direct and efficient help.
+
+![image](https://github.com/wanlidu2/disaster_response_pipeline/assets/121735612/ba872887-fa22-4d2b-bb90-83fa5d2afd55)
+
+Task Allocation
