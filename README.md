@@ -35,6 +35,7 @@ With the help of the basic command framework, I applied knowledge of Flask, html
 ## Strategy
 
 ![image](https://github.com/wanlidu2/disaster_response_pipeline/assets/121735612/965dca1e-736f-4662-9a3f-1d595da765f1)
+
 code construction
 
 -1 Stage 1 - ETL
@@ -56,23 +57,43 @@ Using to_sql to save the clean dataset into an SQLite database for future use;
 
 Results and effects:
 
-To summarize, I examined the comprehensive state of the data, merging various datasets, and extracted actionable insights from raw messages, subsequently storing this information. This data processing stage allowed me to refine the data, making it clearer and more readily usable for future applications. This critical step served as the foundational groundwork for the subsequent stages and was thus indispensable.
+To summarize, I examined the comprehensive state of the data, merging various datasets, and extracting actionable insights from raw messages, subsequently storing this information. This data processing stage allowed me to refine the data, making it clearer and more readily usable for future applications. This critical step served as the foundational groundwork for the subsequent stages and was thus indispensable.
 
 -2 Stage 2 - ML Pipeline
 
 Purpose:
 
+Splitting the data into train and test datasets. After the text recognization and categorization processing, I construct a machine learning pipeline and then used GridSearchCV to improve the parameters setting and the accuracy of the prediction. The model was used to identify the 'message' input column and then predict classifications for 36 categories given by the previous datasets. At last, I saved my model into a pickle file for further use in the running process in the IDE part.
+
 Code:
 
+Import libraries: sys and pandas to read and process data, matplotlib for data visualization, pickle to save the model, nltk for text analysis, sklearn to implement the code of machining learning building;
+The first was to load data from the engine I created by SQLite;
+Then I wrote a tokenization function to process the text data;
+Split the data;
+Defining a main() function and constructing a Pipeline with CountVectorizer, TfidfTransformer, and MultiOutputClassifier;
+Define display_result() function to show the scores of true values and the predicting accuracy;
+Define plot_scores() to help evaluate the model's performance;
+Using the GridSearchCV() to find out fitted parameters and improve the model;
+Using the improved new model to test the data and generate better predictions;
+Try other machine learning strategies such as svm to improve the model further;
+Export the model and save it into a pickle file;
+
 Results and effects:
+
+I built a complete model and saved it in a pickle file, which could be invoked in the further model. After breaking down the task into machine learning parts, I could improve each small step more efficiently.
 
 -3 Stage 3 - IDE
 
 Purpose:
 
+To display the model in a Flask web app. Primarily, I wrote the operations to call my model and the file storage locations into the code and ultimately presented the results in a visualized webpage
+
 Code:
 
 Results and effects:
+
+I created an interactive webpage that allows for text input the analyzes it into 36 'message' columns.
 
 
 ## Challenges and some problem solutions
