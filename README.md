@@ -83,13 +83,17 @@ Results and effects:
 
 I built a complete model and saved it in a pickle file, which could be invoked in the further model. After breaking down the task into machine learning parts, I could improve each small step more efficiently.
 
--3 Stage 3 - IDE
+-3 Stage 3 - IDE in Linux
 
 Purpose:
 
 To display the model in a Flask web app. Primarily, I wrote the operations to call my model and the file storage locations into the code and ultimately presented the results in a visualized webpage
 
 Code:
+Run the 
+ETL pipeline and saved the cleaned dataset in the database;
+Run the ML pipeline and train the model then save the model in a pickle file;
+Add the data and file path to the run.py then try to run the websites;
 
 Results and effects:
 
@@ -98,9 +102,13 @@ I created an interactive webpage that allows for text input the analyzes it into
 
 ## Challenges and some problem solutions
 
+It was my first time using Linux and I could not find where to run the code of the file. Then I searched for instructions on the website and asked my mentor for help then get to know more useful skills to design the model and the interactive website. Besides, saving data in SQLite is also an efficient way to save data, and I will use it more frequently in further study.
 
 ## Display of Results
 
+https://tli27l4ijp.prod.udacity-student-workspaces.com/
 
 
 ## Reflection and Insights
+
+https://learn.udacity.com/nanodegrees/nd025/parts/cd0018/lessons/c5de7207-8fdb-4cd1-b700-b2d7ce292c26/concepts/068e995d-9064-4098-a0ce-e74dc7f90fa6
