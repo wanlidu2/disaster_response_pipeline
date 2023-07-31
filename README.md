@@ -39,7 +39,7 @@ code construction
 
 -1 Stage 1 - ETL
 
-Purpose: At the beginning, I was going to handle the data extraction, transformation, and loading to a more convenient place to store and read.
+* Purpose: At the beginning, I was going to handle the data extraction, transformation, and loading to a more convenient place to store and read.
 
 Code:
 
