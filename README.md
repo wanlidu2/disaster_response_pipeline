@@ -39,13 +39,26 @@ code construction
 
 -1 Stage 1 - ETL
 
-* Purpose: At the beginning, I was going to handle the data extraction, transformation, and loading to a more convenient place to store and read.
+Purpose: 
 
-Code:
+In the beginning, I was going to handle the data extraction, transformation, and loading to a more convenient place to store and read.
+
+Code: 
+
+Import and read the datasets;
+Merge two datasets: messages.csv and categories.csv on the 'id' column;
+Split the values from the 'categories' column by the sign ';' and reorganize the column, making it more clear to read;
+Display the columns after splitting, using the lambda function to extract each string;
+Get dummies from the category values to guarantee the information could be used in the pipeline and regression;
+Drop the original categories from the dataset since we already store the more structured information in new columns, it is for the code to be more clean and the dataset more readable;
+Drop the duplicated columns in case to simplify the code before regression and save time;
+Using to_sql to save the clean dataset into an SQLite database for future use;
 
 Results and effects:
 
--2
+To summarize, I examined the comprehensive state of the data, merging various datasets, and extracted actionable insights from raw messages, subsequently storing this information. This data processing stage allowed me to refine the data, making it clearer and more readily usable for future applications. This critical step served as the foundational groundwork for the subsequent stages and was thus indispensable.
+
+-2 Stage 2 - ML Pipeline
 
 Purpose:
 
@@ -53,7 +66,7 @@ Code:
 
 Results and effects:
 
--3
+-3 Stage 3 - IDE
 
 Purpose:
 
